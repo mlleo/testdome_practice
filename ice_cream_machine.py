@@ -17,6 +17,27 @@ should return
     print(machine.scoops()) #should print[['vanilla', 'chocolate sauce'], ['chocolate', 'chocolate sauce']]
 """
 
+
+```
+# code without library
+class IceCreamMachine:
+    
+    def __init__(self, ingredients, toppings):
+        self.ingredients = ingredients
+        self.toppings = toppings
+        
+    def scoops(self):
+        arr = []
+        for i in range(len(self.ingredients)):
+            for j in range(len(self.toppings)):
+                arr.append([self.ingredients[i],self.toppings[j]])
+        return arr
+
+if __name__ == "__main__":
+    machine = IceCreamMachine(["vanilla", "chocolate"], ["chocolate sauce"])
+    print(machine.scoops()) #should print[['vanilla', 'chocolate sauce'], ['chocolate', 'chocolate sauce']]
+```
+
 from itertools import product
 
 
